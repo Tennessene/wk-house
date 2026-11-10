@@ -1,0 +1,81 @@
+/* Ensure the diagonal arrows retain their intended text-glyph treatment on iOS. */
+.text-link span,
+.quick-view,
+.product-caption > span,
+.newsletter form button,
+.footer-bottom a,
+.notify-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant-emoji: text;
+}
+
+@media (max-width: 720px) {
+  /* Let the collection read as a small fashion lookbook rather than a squeezed grid. */
+  .collection {
+    overflow: hidden;
+    padding: 78px 0 80px;
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin: 0 22px 36px;
+  }
+
+  .section-heading .eyebrow { margin-bottom: 13px; }
+
+  .section-heading h2 {
+    font-size: clamp(55px, 16vw, 67px);
+    line-height: .84;
+    letter-spacing: -.055em;
+  }
+
+  .section-heading > p {
+    border-left: 1px solid rgba(41, 36, 31, .25);
+    margin: 0;
+    max-width: 225px;
+    padding-left: 12px;
+  }
+
+  .product-grid {
+    display: flex;
+    gap: 14px;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0 22px 22px;
+    scroll-padding-left: 22px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .product-grid::-webkit-scrollbar { display: none; }
+
+  .product {
+    flex: 0 0 74vw;
+    margin: 0 !important;
+    scroll-snap-align: start;
+  }
+
+  .product:nth-child(2) { padding-top: 34px; }
+  .product:nth-child(3) { padding-top: 12px; }
+
+  .product-image img {
+    height: 100vw;
+    min-height: 0;
+  }
+
+  .product-caption {
+    display: flex;
+    padding-top: 13px;
+  }
+
+  .product-caption h3 { font-size: 11px; }
+  .product-caption p { font-size: 9px; }
+  .product-caption > span { display: block; }
+
+  .availability-note {
+    margin: 10px 22px 0;
+    text-align: left;
+  }
+}
