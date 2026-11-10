@@ -1,0 +1,9 @@
+# Cloudflare Workers static-asset deployment for the WK editorial site.
+# There is no application build step: Wrangler uploads and serves the site's
+# HTML, CSS, JavaScript and image assets directly from this directory.
+
+name = "wk-house"
+compatibility_date = "2025-11-01"
+
+[assets]
+directory = "."

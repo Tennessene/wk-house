@@ -1,0 +1,13 @@
+# Files and source material that should never be exposed as public assets.
+
+# Repository and local-machine metadata
+.git/
+.gitignore
+.assetsignore
+wrangler.toml
+.DS_Store
+**/.DS_Store
+
+# The nested prototype was used as a design reference; the deployable source
+# has been consolidated at the project root.
+wk/

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wk-house.com/sitemap.xml
